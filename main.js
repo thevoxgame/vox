@@ -7,19 +7,19 @@ const ALTO = canvas.height;
 
 //Imagenes
 const imagenNave = new Image();
-imagenNave.src = '/Users/marionaldi/Desktop/JUEGO VOX/imagenes/nave.png'; // Cambia esto a la ruta de tu imagen
+imagenNave.src = 'nave.png'; // Cambia esto a la ruta de tu imagen
 
 const imagenEnemigo = new Image();
-imagenEnemigo.src = '/Users/marionaldi/Desktop/JUEGO VOX/imagenes/fernando.png'; // Cambia esto a la ruta de tu imagen
+imagenEnemigo.src = 'fernando.png'; // Cambia esto a la ruta de tu imagen
 
 const imagenEnemigo2 = new Image();
-imagenEnemigo2.src = '/Users/marionaldi/Desktop/JUEGO VOX/imagenes/pepe.png'; // Cambia esto a la ruta de tu imagen
+imagenEnemigo2.src = 'pepe.png'; // Cambia esto a la ruta de tu imagen
 
 const imagenEscudo = new Image();
-imagenEscudo.src = '/Users/marionaldi/Desktop/JUEGO VOX/imagenes/escudo.png'; // Cambia esto a la ruta de tu imagen
+imagenEscudo.src = 'escudo.png'; // Cambia esto a la ruta de tu imagen
 
 const imagenObstaculo = new Image();
-imagenObstaculo.src = '/Users/marionaldi/Desktop/JUEGO VOX/imagenes/agenda.png'; // Cambia esto a la ruta de tu imagen
+imagenObstaculo.src = 'agenda.png'; // Cambia esto a la ruta de tu imagen
 
 
 // Variables de juego
