@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The VOX Game</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('/Users/marionaldi/Desktop/JUEGO VOX/imagenes/fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre de tu imagen */
+            background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+            background-position: center 20px; /* Mueve la imagen hacia abajo (20px) */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #password-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para destacar el formulario */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        #error-message {
+            color: red;
+            display: none;
+        }
+        #gameCanvas {
+            background: black; /* Fondo negro solo para el canvas */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="password-form">
+        <h2>Introduce la contraseña para acceder al juego</h2>
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="button" value="Acceder" onclick="checkPassword()">
+        <p id="error-message">Contraseña incorrecta</p>
+    </div>
+
+    <div id="content" style="display:none;">
+        <h1>The VOX Game</h1>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <script src="main.js"></script>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "vox"; // Cambia "tuContraseña" por la contraseña deseada
+
+            if (password === correctPassword) {
+                document.getElementById('password-form').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
